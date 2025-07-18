@@ -12,14 +12,10 @@ function App() {
  const[convertedAmount,setconvertedAmount] = useState(0)
 
  const currencyInfo = useCurrencyInfo(from);
-// `currencyInfo` will return an object containing currency conversion rates 
-// from the selected 'from' currency to all other currencies.
+
 
 const options = Object.keys(currencyInfo);
-// `options` will be an array of all possible currency codes 
-// to which the 'from' currency can be converted (e.g., ["inr", "usd", "eur", ...])
-
- //swap means 'to' data will be set in 'from' and 'from' will in 'to'
+ 
  const swap = ()=>{
   setFrom(to)
   setTo(from)
@@ -38,7 +34,6 @@ const convert = ()=> {
 
 
 
-//currencyInfo se to kroge to tumhe jisme convert krna hai uska exchange rate mil jayega
   return (
     <div
         className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
