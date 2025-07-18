@@ -26,10 +26,7 @@ function InputBox({
                     type="number"
                     placeholder="Amount"
                     disabled = {amountDisable}
-                    onChange={(e)=>onAmountChange && onAmountChange(Number(e.target.value))}
-                    //we use Number to ensure number not string format
-                    // if amount change exist then do otherwise if it doesnot we dont do thats why we use &&
-                    //whenever user give input this onChange execute the method onAmountChange and passes the user val in this function   
+                    onChange={(e)=>onAmountChange && onAmountChange(Number(e.target.value))} 
                 />
             </div>
             <div className="w-1/2 flex flex-wrap justify-end text-right">
@@ -41,8 +38,6 @@ function InputBox({
                     onChange={(e)=>onCurrencyChange && onCurrencyChange(e.target.value)} 
                     
                     >
-                    {/* loop in through currencyoption array
-                        //if you want efficient performance in loops then remember passing the key in react */}
                     {currencyOptions.map((currency)=>
                     (
                         <option key = {currency} value={currency}>
