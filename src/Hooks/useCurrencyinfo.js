@@ -1,7 +1,5 @@
 import {useEffect,useState} from "react"
-//custom hook useCurrencyInfo is created 
-//fetch response is converted into json and then currency value
-//is extracted from it
+
 function useCurrencyInfo(currency){
     const[data,setData] = useState({})
     useEffect(()=>{
